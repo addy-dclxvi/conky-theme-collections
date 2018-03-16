@@ -38,6 +38,9 @@ Just my homebrew Conky collections
 ## Sidepanes
 ![sidepanes](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-sidepanes.jpg) <br />
 
+## Syclo
+![syclo](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-syclo.jpg) <br />
+
 ## Installations
 Simply just clone this repo to your Conky configurations folder <br />
 `git clone https://github.com/addy-dclxvi/Conky-Theme-Collections ~/.config/conky --depth 1`

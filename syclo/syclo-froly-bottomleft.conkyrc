@@ -1,0 +1,184 @@
+--[[
+#=====================================================================================
+#                               
+# Name    : Syclo Conky (Simple System Info & Clock)
+# Author  : Adhi Pambudi
+#           https://plus.google.com/+AdhiPambudi
+#           http://addy-dclxvi.deviantart.com/
+# Github  : https://github.com/addy-dclxvi
+# Version : v3.0.1
+# License : Distributed under the terms of GNU GPL version 2 or later
+# Note    : Using template from Erik Dubois
+#
+#=====================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#
+#=====================================================================================
+
+]]
+
+
+conky.config = {
+
+--##  Begin Window Settings  #####################
+
+own_window = true,
+own_window_type = 'desktop',
+own_window_transparent = true,
+own_window_hints = 'undecorated,below,skip_taskbar,skip_pager,sticky',
+own_window_colour = '#000000',
+own_window_class = 'Conky',
+own_window_title = 'Syclo Conky',
+--## ARGB can be used for real transparency
+--## NOTE that a composite manager is required for real transparency.
+--## This option will not work as desired (in most cases) in conjunction with
+--## own_window_type normal
+-- own_window_argb_visual yes # Options: yes or no
+
+--## When ARGB visuals are enabled, this use this to modify the alpha value
+--## Use: own_window_type normal
+--## Use: own_window_transparent no
+--## Valid range is 0-255, where 0 is 0% opacity, and 255 is 100% opacity.
+-- own_window_argb_value 50
+
+minimum_width = 420, 
+minimum_height = 220,
+maximum_width = 420,
+
+gap_x = 0,--## left | right
+gap_y = 0,--## up | down
+
+alignment = 'bottom_left',
+
+--######################  End Window Settings  ###
+
+
+--##  Font Settings  #############################
+-- Use Xft (anti-aliased font and stuff)
+use_xft = true,
+--xftfont Liberation Mono:bold:size=9
+font = 'Roboto:size=10',
+
+-- Alpha of Xft font. Must be a value at or between 1 and 0 ###
+xftalpha = 1,
+-- Force UTF8? requires XFT ###
+override_utf8_locale = true,
+
+uppercase = false,
+
+--########################  End Font Settings  ###
+
+
+--##  Colour Settings  ###########################
+draw_shades = false,--yes
+default_shade_color = 'black',
+
+draw_outline = false,-- amplifies text if yes
+default_outline_color = 'black',
+
+default_color = '#ffffff',-- PureWhite
+color0 = '#fd7980',-- froly
+color1 = '#778899',-- LightSlateGray
+color2 = '#D8BFD8',-- Thistle
+color3 = '#9ACD32',-- YellowGreen
+color4 = '#FFA07A',-- LightSalmon
+color5 = '#FFDEAD',-- NavajoWhite
+color6 = '#00BFFF',-- DeepSkyfroly
+color7 = '#5F9EA0',-- Cadetfroly
+color8 = '#BDB76B',-- DarkKhaki
+color9 = '#CD5C5C',-- IndianRed
+
+--######################  End Colour Settings  ###
+
+
+--##  Borders Section  ###########################
+
+draw_borders = false,
+-- Stippled borders?
+stippled_borders = 5,
+-- border margins
+border_inner_margin = 0,
+border_outer_margin = 0,
+-- border width
+border_width = 0,
+-- graph borders
+draw_graph_borders = true,--no
+--default_graph_size 15 40
+
+--#######################  End Borders Secton  ###
+
+
+--##  Miscellaneous Section  #####################
+
+-- Boolean value, if true, Conky will be forked to background when started.
+background = true,
+-- Adds spaces around certain objects to stop them from moving other things
+-- around, this only helps if you are using a mono font
+-- Options: right, left or none
+use_spacer = 'none',
+
+-- Default and Minimum size is 256 - needs more for single commands that
+-- "call" a lot of text IE: bash scripts
+--text_buffer_size 6144
+
+-- Subtract (file system) buffers from used memory?
+no_buffers = true,
+
+-- change GiB to G and MiB to M
+short_units = true,
+
+-- Like it says, ot pads the decimals on % values
+-- doesn't seem to work since v1.7.1
+pad_percents = 2,
+
+-- Imlib2 image cache size, in bytes. Default 4MiB Increase this value if you use
+-- $image lots. Set to 0 to disable the image cache.
+imlib_cache_size = 0,
+
+-- Use the Xdbe extension? (eliminates flicker)
+-- It is highly recommended to use own window with this one
+-- so double buffer won't be so big.
+double_buffer = true,
+
+--   Maximum size of user text buffer, i.e. layout below TEXT line in config file
+--  (default is 16384 bytes)
+-- max_user_text 16384
+
+-- Desired output unit of all objects displaying a temperature. Parameters are
+-- either "fahrenheit" or "celsius". The default unit is degree Celsius.
+-- temperature_unit Fahrenheit
+
+--################  End Miscellaneous Section  ###
+
+update_interval = 1,
+
+};
+
+conky.text = [[
+# You can change bg-bottomleft-75.png to bg-bottomleft-50.png for 50% opacity
+# Or bg-bottomleft-25.png for 25% opacity
+# Or bg-bottomleft-0.png for fully transparent
+${image ~/.config/conky/syclo/images/bg/bg-bottomleft-75.png -p 0,0 -s 420x220}\
+${goto 24}${font Roboto:Light:size=72}${color0}\
+${time %H}${color}\
+\
+:\
+\
+${time %M}${font}${color}
+\
+${goto 24}${font Roboto:Light:size=20}${voffset 12}${execi 300 LANG=en_US.utf8 LC_TIME=en_US.utf8 date +"%A"},${color}\
+${color0} ${execi 300 LANG=en_US.utf8 LC_TIME=en_US.utf8 date +"%d"}${color}\
+ ${execi 300 LANG=en_US.utf8 LC_TIME=en_US.utf8 date +"%B"}${font}${color}
+\
+
+${goto 24}\
+${font Roboto:Light:pixelsize=12}\
+${image ~/.config/conky/syclo/images/froly/hdd.png -p 20,170 -s 16x16} ${offset 20}${fs_used /} / ${fs_size /}\
+${image ~/.config/conky/syclo/images/froly/ram.png -p 140,170 -s 16x16} ${offset 45}$mem / $memmax\
+${image ~/.config/conky/syclo/images/froly/cpu.png -p 260,170 -s 16x16} ${offset 45}${cpu cpu0}%
+]];
