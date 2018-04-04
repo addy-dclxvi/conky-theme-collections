@@ -54,5 +54,5 @@ fi
 #echo -e "${color}"
 #echo "****************             Welcome back Addy!             *****************"
 #echo -e "\n"
-echo -e "$quote" | sed 's/n()//g'| xargs -0 echo | fmt -50
+echo -e "$quote" | sed 's/n()//g'| xargs -0 echo | fmt -60
 #echo -e "${NC}"
