@@ -59,6 +59,9 @@ Muse (before *The 2nd Law* album), Greenday (before they join MTV), and Superman
 ## Cliff
 ![cliff](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-cliff.jpg) <br />
 
+## Geddy
+![geddy](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-geddy.jpg) <br />
+
 ## Installations
 Simply just clone this repo to your Conky configurations folder <br />
 `git clone https://github.com/addy-dclxvi/conky-theme-collections ~/.config/conky --depth 1`
