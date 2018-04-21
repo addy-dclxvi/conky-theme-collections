@@ -1,0 +1,153 @@
+-- Informant Conky
+
+-- By Addy
+-- https://plus.google.com/+AdhiPambudi
+-- http://addy-dclxvi.deviantart.com/
+-- https://github.com/addy-dclxvi
+
+
+-- For commands above TEXT check:
+-- http://conky.sourceforge.net/config_settings.html
+
+-- For commands available below TEXT check:
+-- http://conky.sourceforge.net/variables.html
+
+
+conky.config = {
+--##  Begin Window Settings  #####################
+own_window = true,
+own_window_type = 'desktop',
+own_window_transparent = true,
+own_window_hints = 'undecorated,below,skip_taskbar,skip_pager,sticky',
+own_window_colour = '#000000',
+own_window_class = 'Conky',
+own_window_title = 'ARCHLabs Top Conky',
+--## ARGB can be used for real transparency
+--## NOTE that a composite manager is required for real transparency.
+--## This option will not work as desired (in most cases) in conjunction with
+--## own_window_type normal
+-- own_window_argb_visual yes # Options: yes or no
+
+--## When ARGB visuals are enabled, this use this to modify the alpha value
+--## Use: own_window_type normal
+--## Use: own_window_transparent no
+--## Valid range is 0-255, where 0 is 0% opacity, and 255 is 100% opacity.
+-- own_window_argb_value 50
+
+minimum_width = 200, 
+minimum_height = 200,
+maximum_width = 400,
+
+gap_x = 20,--## left | right
+gap_y = 0,--## up | down
+
+alignment = 'top_right',
+--######################  End Window Settings  ###
+--##  Font Settings  #############################
+-- Use Xft (anti-aliased font and stuff)
+use_xft = true,
+--# Requires mono font for spacing reasons
+--xftfont Liberation Mono:bold:size=9
+font = 'Roboto:size=10',
+
+
+-- Alpha of Xft font. Must be a value at or between 1 and 0 ###
+xftalpha = 1,
+-- Force UTF8? requires XFT ###
+override_utf8_locale = true,
+
+uppercase = false,
+--########################  End Font Settings  ###
+--##  Colour Settings  ###########################
+draw_shades = false,--yes
+default_shade_color = 'black',
+
+draw_outline = false,-- amplifies text if yes
+default_outline_color = 'black',
+
+--default_color 656667 # Waldorf original colour
+--default_color 7a7a7a # Flame  & Bunsen Grey
+--default_color 929292 # Labs Grey
+default_color = '#40e0d0',-- cyan
+color0 = '#ffffff',-- purewhite
+color1 = '#777777',-- Gray
+color2 = '#D8BFD8',-- Thistle
+color3 = '#9ACD32',-- YellowGreen
+color4 = '#FFA07A',-- LightSalmon
+color5 = '#FFDEAD',-- NavajoWhite
+color6 = '#00BFFF',-- DeepSkycyan
+color7 = '#5F9EA0',-- Cadetcyan
+color8 = '#BDB76B',-- DarkKhaki
+color9 = '#CD5C5C',-- IndianRed
+--######################  End Colour Settings  ###
+--##  Borders Section  ###########################
+draw_borders = false,
+-- Stippled borders?
+stippled_borders = 5,
+-- border margins
+border_inner_margin = 5,
+border_outer_margin = 0,
+-- border width
+border_width = 2,
+-- graph borders
+draw_graph_borders = true,--no
+--default_graph_size 15 40
+--#######################  End Borders Secton  ###
+--##  Miscellaneous Section  #####################
+-- Boolean value, if true, Conky will be forked to background when started.
+background = true,
+-- Adds spaces around certain objects to stop them from moving other things
+-- around, this only helps if you are using a mono font
+-- Options: right, left or none
+use_spacer = 'none',
+
+-- Default and Minimum size is 256 - needs more for single commands that
+-- "call" a lot of text IE: bash scripts
+--text_buffer_size 6144
+
+-- Subtract (file system) buffers from used memory?
+no_buffers = true,
+
+-- change GiB to G and MiB to M
+short_units = true,
+
+-- Like it says, ot pads the decimals on % values
+-- doesn't seem to work since v1.7.1
+pad_percents = 2,
+
+-- Imlib2 image cache size, in bytes. Default 4MiB Increase this value if you use
+-- $image lots. Set to 0 to disable the image cache.
+imlib_cache_size = 0,
+
+-- Use the Xdbe extension? (eliminates flicker)
+-- It is highly recommended to use own window with this one
+-- so double buffer won't be so big.
+double_buffer = true,
+
+--   Maximum size of user text buffer, i.e. layout below TEXT line in config file
+--  (default is 16384 bytes)
+-- max_user_text 16384
+
+-- Desired output unit of all objects displaying a temperature. Parameters are
+-- either "fahrenheit" or "celsius". The default unit is degree Celsius.
+-- temperature_unit Fahrenheit
+--################  End Miscellaneous Section  ###
+
+update_interval = 1,
+
+};
+
+conky.text = [[
+${font Roboto:Light:size=72}$alignr${time %H}${color0}:${time %M}${font}${color}
+${font Roboto:Light:size=24}${voffset 12}$alignr${color0}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A"}${color},\
+ ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%d"}\
+${color0} ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%B"}${font}${voffset 2}
+${hr}${color}${voffset 4}
+${font Roboto:pixelsize=13}${alignr} USER: ${color0}${execi 5000 whoami}${color} ${color1}I${color} MACHINE: ${color0}$nodename${color} ${color1}I${color} UPTIME: ${color0}$uptime${color}
+${font Roboto:pixelsize=13}${alignr} DISTRIBUTION: ${color0}${execi 6000 awk -F'=' '/DESCRIPTION/ {print $2}' /etc/lsb-release |sed 's/"//g'}${color} ${color1}I${color} VERSION: ${color0}${execi 6000 awk -F'=' '/DISTRIB_RELEASE=/ {printf $2" "} /CODENAME/ {print $2}' /etc/lsb-release}${color}
+${font Roboto:pixelsize=13}${alignr} ARCHITECTURE: ${color0}${machine}${color} ${color1}I${color} KERNEL: ${color0}${kernel}${color}
+${font Roboto:pixelsize=13}${alignr} ROOT: ${color0}${fs_used /}${color} / ${color0}${fs_size /}${color} ${color1}I${color} HOME: ${color0}${fs_used /home}${color} / ${color0}${fs_size /home}${color}
+${font Roboto:pixelsize=13}${alignr} CPU: ${color0}${cpu cpu0}%${color} ${color1}I${color} RAM: ${color0}$mem / $memmax${color} HD: ${color0}${fs_used_perc}%${color}
+${font Roboto:pixelsize=13}${alignr} SWAP: ${color0}${swap} / ${swapmax}${color} ${color1}I${color} SYS TEMP: ${color0}${hwmon temp 1}°C${color}
+${font Roboto:pixelsize=13}${alignr} YOU CAN INSTALL ${color0}${execpi 12000 checkupdates | wc -l} UPDATE(S)${color}
+]]

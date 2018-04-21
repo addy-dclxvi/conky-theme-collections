@@ -3,6 +3,7 @@ Just my homebrew Conky collections
 
 ## Getting Started & Notes
 - Need Conky 1.10
+- Except Informant Conky, I made it long time ago for ArchLabs. And I was still using 1.09 syntax in that time.
 - To make sure it works, use conky with all build options enabled.
 Use `conky-all` package if You're on Debian.
 - Music widget is for `mpd`.
@@ -33,6 +34,7 @@ If You want to make it available on every workspace, change
 - Different Distro probably has different font version & font config.
 This affect the font kerning and spacing. This make the image and the text misaligned.
 Maybe You can try to change the images coordinate or change the text placement using `offset` if You find the image & text misaligned.
+- It works for me
 - Probably couldn't work out of the box :stuck_out_tongue_winking_eye:
 - You should listen to Dream Theater, Metallica, Nirvana, Led Zeppelin, NOFX, Alice in Chain, Linkin Park,
 Pearl Jam, Slipknot, System of a Down, Soundgarden, Dragonforce, Radiohead, Red Hot Chilli Peppers (before John Frusciante left),
@@ -61,6 +63,12 @@ Muse (before *The 2nd Law* album), Greenday (before they join MTV), and Superman
 
 ## Geddy
 ![geddy](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-geddy.jpg) <br />
+
+## Informant
+![informant](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-informant.jpg) <br />
+
+## Block
+![block](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-block.jpg) <br />
 
 ## Installations
 Simply just clone this repo to your Conky configurations folder <br />
