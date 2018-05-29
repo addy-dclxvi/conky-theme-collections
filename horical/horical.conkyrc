@@ -1,0 +1,33 @@
+background yes
+use_xft yes
+font 'VCR OSD Mono:Regular:size=14'
+xftalpha 0.2
+update_interval 30
+total_run_times 0
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 1366 80
+maximum_width 1366
+no_buffers yes
+cpu_avg_samples 2
+net_avg_samples 2
+use_spacer none
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+border_inner_margin 0
+border_outer_margin 0
+override_utf8_locale yes
+default_color 383333
+alignment top_right
+uppercase no
+text_buffer_size 2048
+imlib_cache_size 0 
+gap_x 0
+gap_y 640
+TEXT
+$color${execpi 36000 ~/.config/conky/horical/res/horical}${color}

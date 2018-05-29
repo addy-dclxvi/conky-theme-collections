@@ -26,7 +26,7 @@ Check the *issues* tab.
 - Again, Inspect the code before use.
 - I will add more themes later.
 - I'm not good at creating name for the themes.
-I just randomly pick name for them.
+I just randomly pick name for them. (**EDIT** : I will name my conky themes after legendary bassists name)  
 - Some of Conky are unstickied. It means, the conky would be visible on one workspace only.
 I do it on large size Conky to make it not distracting on my working workspace.
 If You want to make it available on every workspace, change
@@ -70,6 +70,9 @@ Muse (before *The 2nd Law* album), Greenday (before they join MTV), and Superman
 ## Block
 ![block](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-block.jpg) <br />
 
+## Horical
+![horical](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-horical.jpg) <br />
+
 ## Installations
 Simply just clone this repo to your Conky configurations folder <br />
 `git clone https://github.com/addy-dclxvi/conky-theme-collections ~/.config/conky --depth 1`
@@ -83,4 +86,5 @@ Add it to your startup to make your life easier :wink:
   [here](https://gist.github.com/SahilC/2767b6681539d96c4f37)
 - Weather script is taken from Anachron
 - Some icons are extracted from Min icons pack
+- Horical is not made by me, I just edited it. I don't know the original author, but I got it from DeviantArt
 
