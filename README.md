@@ -73,6 +73,9 @@ Muse (before *The 2nd Law* album), Greenday (before they join MTV), and Superman
 ## Horical
 ![horical](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-horical.jpg) <br />
 
+## Claypool
+![horical](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-claypool.jpg) <br />
+
 ## Installations
 Simply just clone this repo to your Conky configurations folder <br />
 `git clone https://github.com/addy-dclxvi/conky-theme-collections ~/.config/conky --depth 1`
