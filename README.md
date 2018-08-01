@@ -16,7 +16,7 @@ I just want to make it simple.
 - Script execution denied? Do `chmod +x` to the denied script.
 - You can get OpenWeather API code after register to  http://openweathermap.org
 - You can get City ID from http://openweathermap.org/find
-- All of my Conky are using Roboto, Noto-Sans, and M+ fonts.
+- All of my Conky are using Roboto, Noto-Sans, Bebas Neue and M+ fonts.
 - Some of these are designed for 1366x768 screen resolution.
 - The transparency is using *fake transparency* method, because I can take an advantage on Openbox (my favourite window manager).
 The transparancy would still work even if I didn't install any external compositor like compton.
@@ -75,6 +75,9 @@ Muse (before *The 2nd Law* album), Greenday (before they join MTV), and Superman
 
 ## Claypool
 ![horical](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-claypool.jpg) <br />
+
+## Curva
+![horical](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-curva.jpg) <br />
 
 ## Installations
 Simply just clone this repo to your Conky configurations folder <br />
