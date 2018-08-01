@@ -51,6 +51,7 @@ Muse (before *The 2nd Law* album), Greenday (before they join MTV), and Superman
 
 ## Sidepanes
 ![sidepanes](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-sidepanes.jpg) <br />
+The left part is tint2
 
 ## Syclo
 ![syclo](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-syclo.jpg) <br />
@@ -63,12 +64,14 @@ Muse (before *The 2nd Law* album), Greenday (before they join MTV), and Superman
 
 ## Geddy
 ![geddy](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-geddy.jpg) <br />
+The bottom part is tint2
 
 ## Informant
 ![informant](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-informant.jpg) <br />
 
 ## Block
 ![block](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-block.jpg) <br />
+The bottom part is tint2
 
 ## Horical
 ![horical](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-horical.jpg) <br />
@@ -78,6 +81,7 @@ Muse (before *The 2nd Law* album), Greenday (before they join MTV), and Superman
 
 ## Curva
 ![horical](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-curva.jpg) <br />
+The bottom part is tint2
 
 ## Installations
 Simply just clone this repo to your Conky configurations folder <br />
