@@ -77,10 +77,11 @@ The bottom part is tint2
 ![horical](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-horical.jpg) <br />
 
 ## Claypool
-![horical](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-claypool.jpg) <br />
+![claypool](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-claypool.jpg) <br />
+The bottom part is tint2
 
 ## Curva
-![horical](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-curva.jpg) <br />
+![curva](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-curva.jpg) <br />
 The bottom part is tint2
 
 ## Installations
