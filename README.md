@@ -84,6 +84,10 @@ The bottom part is tint2
 ![curva](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-curva.jpg) <br />
 The bottom part is tint2
 
+## Whitewalls
+![whitewalls](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-whitewalls.jpg) <br />
+Needs Bebas Neue and Nexa Rust fonts
+
 ## Installations
 Simply just clone this repo to your Conky configurations folder <br />
 `git clone https://github.com/addy-dclxvi/conky-theme-collections ~/.config/conky --depth 1`
