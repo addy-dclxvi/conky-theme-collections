@@ -88,6 +88,10 @@ The bottom part is tint2
 ![whitewalls](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-whitewalls.jpg) <br />
 Needs Bebas Neue and Nexa Rust fonts
 
+## Comicheroes
+![comicheroes](https://raw.githubusercontent.com/addy-dclxvi/conky-theme-collections/master/preview-comicheroes.jpg) <br />
+Needs [Helsinki](https://www.fontsquirrel.com/fonts/download/helsinki) font
+
 ## Installations
 Simply just clone this repo to your Conky configurations folder <br />
 `git clone https://github.com/addy-dclxvi/conky-theme-collections ~/.config/conky --depth 1`
